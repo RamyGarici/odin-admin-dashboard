@@ -121,7 +121,7 @@
 } 
 
 .header .notify img[alt="Profile picture"] {
-  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+
   width: 35px;
   height: 35px;
 }
@@ -155,7 +155,7 @@
 .bottom img{
     width: 70px;
     height: 70px;
-      filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+     
       padding: 0;
 }
 
