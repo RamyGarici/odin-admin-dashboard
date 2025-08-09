@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: min(300px,40%) 1fr;
+    grid-template-rows: 170px 1fr;
+    grid-area: "sidebar header"
+               "sidebar main";
+
+}
+
+
+
+
+.header {
+  background-color: white;
+  grid-area: header;
+}
+
+.sidebar {
+  background-color: rgb(35, 140, 225);
+  grid-area: sidebar;
+}
+
+
+
+
+.header .search img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+}
