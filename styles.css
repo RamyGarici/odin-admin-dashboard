@@ -194,3 +194,29 @@
 
 .main{background-color: #eee;
 grid-area: main;}
+
+.projects{
+    padding: 20px;
+}
+
+
+.boxes-container{
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.box{
+    background-color: white;
+    border-radius: 10px;
+    border-left: gold solid 6px;
+    margin: 20px;
+   padding: 20px;
+    height: 200px;
+}
+
+.box p{
+    color: #ccc;
+}
