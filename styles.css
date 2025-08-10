@@ -1,35 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+:root {
+    --primary: #4F46E5; 
+    --primary-dark: #3730A3; 
+    --accent: #8B5CF6; 
+    --accent-light: #EDE9FE; 
+    --background: #F9FAFB; 
+    --text: #374151; 
+    --muted-text: #6B7280;
+    --border: #E5E7EB;
+}
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
+p {
+    margin-top: 10px;
+    color: var(--muted-text);
+}
 
-
-.container{
+.container {
     height: 100vh;
     display: grid;
     grid-template-columns: min(300px,40%) 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "sidebar header"
-               "sidebar main";
-
+                         "sidebar main";
 }
 
-
-
-
-
-
-
-
-
+/* Sidebar */
 .sidebar {
-  background-color: rgb(35, 140, 225);
-  grid-area: sidebar;
-  padding: 15px;
+    background-color: var(--primary);
+    grid-area: sidebar;
+    padding: 15px;
 }
 
 .sidebar .logo {
@@ -39,127 +45,110 @@
     margin-bottom: 30px;
 }
 
-.sidebar h1{
+.sidebar h1 {
     color: white;
 }
 
 .sidebar .dashboard-img {
-  width: 100%;
-  filter: invert(100%) sepia(2%) saturate(3739%) hue-rotate(144deg) brightness(93%) contrast(119%);
+    width: 100%;
+    filter: invert(100%) sepia(2%) saturate(3739%) hue-rotate(144deg) brightness(93%) contrast(119%);
 }
 
-.menu li{
+.menu li {
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: auto;
     gap: 10px;
     align-items: center;
     margin-bottom: 15px;
-
 }
 
-.sidebar .menu img{
+.sidebar .menu img {
     width: 25px;
     height: 25px;
     justify-self: center;
 }
 
-.sidebar .menu a{
+.sidebar .menu a {
     text-decoration: none;
     font-weight: bold;
     color: white;
 }
 
-
-
-
-
-
-
+/* Header */
 .header {
-  background-color: white;
-  grid-area: header;
+    background-color: white;
+    grid-area: header;
     padding: 25px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-     z-index: 10;
-    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
-.search-bar{
+.search-bar {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
 }
 
-
-.header .search input{
-    background-color: #ccc;
+.header .search input {
+    background-color: var(--accent-light);
     border-radius: 15px;
     width: 80%;
     min-width: 200px;
     padding-left: 10px;
     height: 25px;
     border: none;
-    
 }
-
 
 .header .notify {
-  margin-left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-   color: #555;
-
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--muted-text);
 }
 
-
 .header .notify img[alt="Notification icon"] {
-  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
-  width: 25px;
-  height: 25px;
-} 
+    filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+    width: 25px;
+    height: 25px;
+}
 
 .header .notify img[alt="Profile picture"] {
-
-  width: 35px;
-  height: 35px;
+    width: 35px;
+    height: 35px;
 }
 
 .header .search img {
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
-  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
 }
 
-
-.search{
+.search {
     display: flex;
     gap: 5px;
 }
 
-.hi-msg{
-    color:#555;
+.hi-msg {
+    color: var(--muted-text);
     font-size: 12px;
-
 }
-.bottom{
+
+.bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-
-.bottom img{
+.bottom img {
     width: 70px;
     height: 70px;
-     
-      padding: 0;
+    padding: 0;
 }
 
-.profil{
+.profil {
     padding-top: 20px;
     width: 40%;
     display: flex;
@@ -167,125 +156,128 @@
     gap: 20px;
 }
 
-
-
-.buttons button{
-   background-color: rgb(35, 140, 225);
+/* Buttons */
+.buttons button {
+    background-color: var(--primary);
     border-radius: 19px;
     border: none;
     color: white;
     font-weight: bold;
-    
     height: 35px;
+    transition: background-color 0.3s ease;
 }
 
+.buttons button:hover {
+    background-color: var(--primary-dark);
+}
 
-
-.buttons{
+.buttons {
     padding: 20px 50px 0 0;
     width: 35%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   
     gap: 20px;
 }
 
+/* Main */
 
+.main {
+    background-color: var(--background);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+/* Projects */
 
-.main{background-color: #eee;
-grid-area: main;
-display: grid;
-grid-template-columns: 70% 30%;}
-
-.projects{
+.projects {
     padding: 20px;
 }
 
 
-.boxes-container{
+.boxes-container {
     display: grid;
     padding: 0px 0 20px 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
 }
 
-.box{
+.box {
     background-color: white;
     border-radius: 10px;
-    border-left: gold solid 6px;
+    border-left: var(--accent) solid 6px;
     margin: 20px;
-   padding: 20px;
+    padding: 20px;
     height: 200px;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
- p{
-    margin-top: 10px;
-     color: rgba(107, 114, 128, 1);
-}
 
-.announcement{
+
+
+
+
+
+/* Announcements */
+.announcement {
     padding: 20px 20px 20px 0;
-    
 }
-.announcement h1{
+
+.announcement h1 {
     margin-bottom: 20px;
+    color: var(--text);
 }
-.ann-box-container{
+
+.ann-box-container {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
 }
 
-
-.ann-box{
+.ann-box {
     width: 90%;
     padding: 20px;
     padding-left: 30px;
     margin-left: 20px;
     border: none;
-    border-bottom: #ccc solid 1px;
-
+    border-bottom: var(--border) solid 1px;
 }
 
-.ann-box1{
+.ann-box1 {
     width: 90%;
     padding: 20px;
     padding-left: 30px;
     margin-left: 20px;
     border: none;
-   
 }
 
 
-.trending{
-   
+
+
+/* Trending */
+.trending {
     padding: 0 20px 20px 0;
 }
 
-.tren-box-container{
+.tren-box-container {
     margin-top: 10px;
     padding: 10px;
-
-
-    
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
 }
 
-.tren-box img{
+.tren-box img {
     width: 50px;
     height: 50px;
     margin-right: 20px;
 }
 
-.tren-box{
+.tren-box {
     display: flex;
     align-items: center;
     padding: 10px 10px 10px 20px;
+}
 
+.tren-box h2 {
+    color: var(--text);
 }
