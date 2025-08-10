@@ -193,7 +193,9 @@
 
 
 .main{background-color: #eee;
-grid-area: main;}
+grid-area: main;
+display: grid;
+grid-template-columns: 70% 30%;}
 
 .projects{
     padding: 20px;
@@ -202,7 +204,7 @@ grid-area: main;}
 
 .boxes-container{
     display: grid;
-    padding: 20px;
+    padding: 0px 0 20px 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
@@ -215,8 +217,75 @@ grid-area: main;}
     margin: 20px;
    padding: 20px;
     height: 200px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.box p{
-    color: #ccc;
+ p{
+    margin-top: 10px;
+     color: rgba(107, 114, 128, 1);
+}
+
+.announcement{
+    padding: 20px 20px 20px 0;
+    
+}
+.announcement h1{
+    margin-bottom: 20px;
+}
+.ann-box-container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.ann-box{
+    width: 90%;
+    padding: 20px;
+    padding-left: 30px;
+    margin-left: 20px;
+    border: none;
+    border-bottom: #ccc solid 1px;
+
+}
+
+.ann-box1{
+    width: 90%;
+    padding: 20px;
+    padding-left: 30px;
+    margin-left: 20px;
+    border: none;
+   
+}
+
+
+.trending{
+   
+    padding: 0 20px 20px 0;
+}
+
+.tren-box-container{
+    margin-top: 10px;
+    padding: 10px;
+
+
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.tren-box img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.tren-box{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+
 }
